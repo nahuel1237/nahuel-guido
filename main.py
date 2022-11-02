@@ -1,19 +1,13 @@
 import sys
-from PySide2.QtWidgets import QMainWindow, QApplication
 
-# from ui_windows.ui_menu_alumno import Ui_MainWindow
+from PySide2.QtWidgets import QApplication
 
-
-class MainWindow(QMainWindow):
-    def __init__(self):
-        super().__init__()
-        self.ui = Ui_MainWindow()
-        self.ui.setupUi(self)
+from py_windows.general import GeneralWindow
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
 
-    window = MainWindow()
+    window = GeneralWindow()
     window.show()
 
     sys.exit(app.exec_())
